@@ -28,9 +28,9 @@ type FormFillData struct {
 var DefaultFormFillData = FormFillData{
 	Email:       fmt.Sprintf("%s@example.org", xid.New().String()),
 	Color:       "#e66465",
-	Password:    "katanaP@assw0rd1",
-	PhoneNumber: "2124567890",
-	Placeholder: "katana",
+	Password:    "1qaz@WSX",
+	PhoneNumber: "17338438777",
+	Placeholder: "zp857",
 }
 
 // FormInput is an input for a form field
