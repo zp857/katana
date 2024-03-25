@@ -66,6 +66,15 @@ var responseParsers = []responseParser{
 
 	// custom field regex parser
 	{bodyParser, customFieldRegexParser},
+
+	// default
+	{bodyParser, bodyFormTagParser},
+	{bodyParser, scriptContentJsluiceParser},
+	{contentParser, scriptJSFileJsluiceParser},
+	{bodyParser, scriptContentRegexParser},
+	{contentParser, scriptJSFileRegexParser},
+	{contentParser, bodyScrapeEndpointsParser},
+	{headerParser, headerLocationParser},
 }
 
 // parseResponse runs the response parsers on the navigation response

@@ -81,6 +81,11 @@ func (s *Shared) Enqueue(queue *queue.Queue, navigationRequests ...*navigation.R
 		if nr.Depth > s.Options.Options.MaxDepth {
 			continue
 		}
+		//
+		pathVaild := s.Options.ExtensionsValidator.ValidatePath(nr.URL)
+		if !pathVaild {
+			continue
+		}
 		queue.Push(nr, nr.Depth)
 	}
 }
