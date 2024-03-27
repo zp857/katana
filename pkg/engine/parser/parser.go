@@ -75,6 +75,9 @@ var responseParsers = []responseParser{
 	{contentParser, scriptJSFileRegexParser},
 	{contentParser, bodyScrapeEndpointsParser},
 	{headerParser, headerLocationParser},
+
+	// add
+	{bodyParser, bodyAreaTagParser},
 }
 
 // parseResponse runs the response parsers on the navigation response
@@ -146,6 +149,17 @@ func headerRefreshParser(resp *navigation.Response) (navigationRequests []*navig
 // -------------------------------------------------------------------------
 // Begin Body based parsers
 // -------------------------------------------------------------------------
+
+// bodyATagParser parses A tag from response
+func bodyAreaTagParser(resp *navigation.Response) (navigationRequests []*navigation.Request) {
+	resp.Reader.Find("area").Each(func(i int, item *goquery.Selection) {
+		href, ok := item.Attr("href")
+		if ok && href != "" {
+			navigationRequests = append(navigationRequests, navigation.NewNavigationRequestURLFromResponse(href, resp.Resp.Request.URL.String(), "area", "href", resp))
+		}
+	})
+	return
+}
 
 // bodyATagParser parses A tag from response
 func bodyATagParser(resp *navigation.Response) (navigationRequests []*navigation.Request) {
