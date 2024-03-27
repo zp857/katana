@@ -40,6 +40,8 @@ type Response struct {
 	Forms              []Form            `json:"forms,omitempty"`
 	XhrRequests        []Request         `json:"xhr_requests,omitempty"`
 	StoredResponsePath string            `json:"stored_response_path,omitempty"`
+
+	BodyBytes []byte `json:"-"`
 }
 
 type PassiveReference struct {
