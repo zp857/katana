@@ -88,7 +88,7 @@ func (s *Shared) Enqueue(queue *queue.Queue, navigationRequests ...*navigation.R
 			continue
 		}
 		// ignore for pikaqiu logout
-		if strings.Contains(nr.URL, "token_get.php?logout=1") {
+		if strings.Contains(nr.URL, "?logout=1") {
 			continue
 		}
 		queue.Push(nr, nr.Depth)
