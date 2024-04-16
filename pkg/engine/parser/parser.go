@@ -551,8 +551,14 @@ func bodyFormTagParser(resp *navigation.Response) (navigationRequests []*navigat
 		}
 
 		// Get the form field suggestions for all inputs
-		formInputs := []utils.FormInput{}
+		var formInputs []utils.FormInput
 		item.Find("input").Each(func(index int, item *goquery.Selection) {
+			if len(item.Nodes) == 0 {
+				return
+			}
+			formInputs = append(formInputs, utils.ConvertGoquerySelectionToFormInput(item))
+		})
+		item.Find("select").Each(func(index int, item *goquery.Selection) {
 			if len(item.Nodes) == 0 {
 				return
 			}

@@ -46,7 +46,7 @@ func (s *Simple) UniqueURL(url, method string) bool {
 
 // UniqueContent returns true if the content is unique
 func (s *Simple) UniqueContent(data []byte) bool {
-	hash := md5.Sum([]byte(data))
+	hash := md5.Sum(data)
 	encoded := hex.EncodeToString(hash[:])
 
 	_, found := s.data.Get(encoded)
