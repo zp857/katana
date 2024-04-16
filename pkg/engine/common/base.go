@@ -59,7 +59,7 @@ func (s *Shared) Enqueue(queue *queue.Queue, navigationRequests ...*navigation.R
 		}
 
 		// Ignore blank URL items and only work on unique items
-		if !s.Options.UniqueFilter.UniqueURL(reqUrl) && len(nr.CustomFields) == 0 {
+		if !s.Options.UniqueFilter.UniqueURL(reqUrl, nr.Method) && len(nr.CustomFields) == 0 {
 			continue
 		}
 		// - URLs stuck in a loop
@@ -82,12 +82,12 @@ func (s *Shared) Enqueue(queue *queue.Queue, navigationRequests ...*navigation.R
 		if nr.Depth > s.Options.Options.MaxDepth {
 			continue
 		}
-		//
+		// validate path
 		pathVaild := s.Options.ExtensionsValidator.ValidatePath(nr.URL)
 		if !pathVaild {
 			continue
 		}
-		// ignore for pikaqiu logout
+		// ignore for test pikaqiu
 		if strings.Contains(nr.URL, "?logout=1") || strings.Contains(nr.URL, "sqli_del.php") {
 			continue
 		}

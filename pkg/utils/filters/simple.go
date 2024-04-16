@@ -34,12 +34,13 @@ func NewSimple() (*Simple, error) {
 }
 
 // UniqueURL returns true if the URL is unique
-func (s *Simple) UniqueURL(url string) bool {
-	_, found := s.data.Get(url)
+func (s *Simple) UniqueURL(url, method string) bool {
+	identifier := url + "|" + method
+	_, found := s.data.Get(identifier)
 	if found {
 		return false
 	}
-	_ = s.data.Set(url, nil)
+	_ = s.data.Set(identifier, nil)
 	return true
 }
 

@@ -80,7 +80,7 @@ var responseParsers = []responseParser{
 	{bodyParser, bodyAreaTagParser},
 }
 
-// parseResponse runs the response parsers on the navigation response
+// ParseResponse runs the response parsers on the navigation response
 func ParseResponse(resp *navigation.Response) (navigationRequests []*navigation.Request) {
 	for _, parser := range responseParsers {
 		switch {

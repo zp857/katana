@@ -5,7 +5,7 @@ type Filter interface {
 	// Close closes the filter and releases associated resources
 	Close()
 	// UniqueURL specifies whether a URL is unique
-	UniqueURL(url string) bool
+	UniqueURL(url, method string) bool
 	// UniqueContent specifies whether a content is unique
 	// Deduplication is done by hashing of the response data.
 	//
