@@ -87,6 +87,10 @@ func (s *Shared) Enqueue(queue *queue.Queue, navigationRequests ...*navigation.R
 		if !pathVaild {
 			continue
 		}
+		// ignore for gov
+		if strings.Contains(nr.URL, "gov.cn") {
+			continue
+		}
 		// ignore for test pikaqiu
 		if strings.Contains(nr.URL, "?logout=1") || strings.Contains(nr.URL, "sqli_del.php") {
 			continue
