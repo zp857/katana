@@ -28,9 +28,8 @@ require (
 	github.com/rs/xid v1.5.0
 	github.com/shirou/gopsutil/v3 v3.23.12
 	github.com/stretchr/testify v1.9.0
-	github.com/zp857/goutil v0.0.0-20240413070501-2455d2a92b9f
 	go.uber.org/multierr v1.11.0
-	golang.org/x/net v0.21.0
+	golang.org/x/net v0.24.0
 	gopkg.in/yaml.v3 v3.0.1
 )
 
@@ -50,13 +49,15 @@ require (
 	github.com/dlclark/regexp2 v1.8.1 // indirect
 	github.com/docker/go-units v0.5.0 // indirect
 	github.com/fatih/color v1.15.0 // indirect
+	github.com/fsnotify/fsnotify v1.7.0 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/google/go-github/v30 v30.1.0 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
+	github.com/google/pprof v0.0.0-20231229205709-960ae82b1e42 // indirect
 	github.com/hashicorp/go-version v1.6.0 // indirect
 	github.com/hdm/jarm-go v0.0.7 // indirect
 	github.com/kataras/jwt v0.1.8 // indirect
-	github.com/klauspost/compress v1.17.4 // indirect
+	github.com/klauspost/compress v1.17.8 // indirect
 	github.com/klauspost/pgzip v1.2.5 // indirect
 	github.com/kr/pretty v0.3.1 // indirect
 	github.com/lucasb-eyer/go-colorful v1.2.0 // indirect
@@ -66,9 +67,11 @@ require (
 	github.com/mholt/archiver/v3 v3.5.1 // indirect
 	github.com/minio/selfupdate v0.6.1-0.20230907112617-f11e74f84ca7 // indirect
 	github.com/muesli/reflow v0.3.0 // indirect
-	github.com/muesli/termenv v0.15.1 // indirect
+	github.com/muesli/termenv v0.15.2 // indirect
 	github.com/olekukonko/tablewriter v0.0.5 // indirect
-	github.com/pierrec/lz4/v4 v4.1.18 // indirect
+	github.com/onsi/ginkgo/v2 v2.13.2 // indirect
+	github.com/onsi/gomega v1.29.0 // indirect
+	github.com/pierrec/lz4/v4 v4.1.21 // indirect
 	github.com/projectdiscovery/asnmap v1.1.0 // indirect
 	github.com/projectdiscovery/blackrock v0.0.1 // indirect
 	github.com/projectdiscovery/gostruct v0.0.2 // indirect
@@ -95,7 +98,7 @@ require (
 	github.com/yuin/goldmark v1.5.4 // indirect
 	github.com/yuin/goldmark-emoji v1.0.1 // indirect
 	golang.org/x/oauth2 v0.11.0 // indirect
-	golang.org/x/term v0.18.0 // indirect
+	golang.org/x/term v0.19.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/protobuf v1.31.0 // indirect
 )
@@ -138,10 +141,10 @@ require (
 	github.com/zmap/rc2 v0.0.0-20190804163417-abaa70531248 // indirect
 	github.com/zmap/zcrypto v0.0.0-20230422215203-9a665e1e9968 // indirect
 	go.etcd.io/bbolt v1.3.7 // indirect
-	golang.org/x/crypto v0.21.0 // indirect
+	golang.org/x/crypto v0.22.0 // indirect
 	golang.org/x/exp v0.0.0-20240103183307-be819d1f06fc
 	golang.org/x/mod v0.14.0 // indirect
-	golang.org/x/sys v0.18.0 // indirect
+	golang.org/x/sys v0.19.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/tools v0.16.1 // indirect
 	gopkg.in/djherbis/times.v1 v1.3.0 // indirect
